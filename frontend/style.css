@@ -1,0 +1,46 @@
+@import url(/frontend/global.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(150deg, #ffffff, #a7831752);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-weight: 600;
+  font-size: 5vw;
+}
+
+.choose {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.conversion_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.conversion_btn input {
+  height: 31px;
+  width: 150px;
+}
