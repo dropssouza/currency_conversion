@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de moeda</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
   </head>
   <body>
     <header></header>
@@ -16,12 +17,13 @@
         <div class="currency1">
           <h3>Valor e moeda inicial</h3>
           <input
+            class="valor_input"
             type="number"
             name="valor1"
             id="valor1"
             placeholder="Exemplo: 115.80"
           />
-          <select id="moeda1">
+          <select id="moeda1" class="selects">
             <option value="USD">Dólar (USD)</option>
             <option value="EUR">Euro (EUR)</option>
             <option value="BRL">Real (BRL)</option>
@@ -32,13 +34,14 @@
         <div class="currency2">
           <h3>Valor convertido</h3>
           <input
+            class="valor_input"
             type="number"
             name="valor2"
             id="valor2"
             placeholder="Resultado"
             disabled
           />
-          <select id="moeda2">
+          <select id="moeda2" class="selects">
             <option value="USD">Dólar (USD)</option>
             <option value="EUR">Euro (EUR)</option>
             <option value="BRL">Real (BRL)</option>
@@ -48,8 +51,14 @@
         </div>
       </div>
       <div class="conversion_btn">
-        <input type="button" value="converter" />
+        <input
+          id="botao_converter"
+          type="button"
+          value="CONVERTER"
+          onclick="calcular()"
+        />
       </div>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
