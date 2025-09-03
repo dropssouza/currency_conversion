@@ -1,3 +1,13 @@
+const botao = document.getElementById("botao_converter");
+
+botao.addEventListener("touchstart", () => {
+  botao.style.transform = "scale(1.1)";
+});
+
+botao.addEventListener("touchend", () => {
+  botao.style.transform = "scale(1)";
+});
+
 async function calcular() {
   const moeda1 = document.getElementById("moeda1").value;
   const moeda2 = document.getElementById("moeda2").value;
