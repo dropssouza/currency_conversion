@@ -68,22 +68,50 @@ body {
 
 #botao_converter {
   width: 150px;
-  background-color: #a78317; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  padding: 10px 20px; /* Espaçamento interno */
-  border: none; /* Remover borda */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Cursor que indica um link */
+  background-color: #a78317;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.1s;
 }
 
 #botao_converter:hover {
-  background-color: #886a0f; /* Muda a cor ao passar o mouse */
+  background-color: #886a0f;
 }
 
 #botao_converter:active {
   transform: scale(1.1);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #fff;
+  border-top: 3px solid #555;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.button-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 @media (max-width: 725px) {
