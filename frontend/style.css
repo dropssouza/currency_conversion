@@ -1,0 +1,127 @@
+@import url(./global.css);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  border: solid grey 1px;
+
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(150deg, #ffffff, #a7831752);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.choose {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.valor_input {
+  font-size: 16px;
+  margin: 5px 10px;
+}
+
+.selects {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  color: #886a0f;
+}
+
+.conversion_btn {
+  display: flex;
+  justify-content: center;
+}
+
+#botao_converter {
+  width: 150px;
+  background-color: #a78317;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+#botao_converter:hover {
+  background-color: #886a0f;
+}
+
+#botao_converter:active {
+  transform: scale(1.1);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #fff;
+  border-top: 3px solid #555;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+@media (max-width: 725px) {
+  .choose {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .valor_input {
+    width: 130px;
+  }
+}

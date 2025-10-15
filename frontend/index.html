@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de moeda</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="title">
+        <h1>Conversor de moeda</h1>
+      </div>
+      <div class="choose">
+        <div class="currency1">
+          <h3>Valor e moeda inicial</h3>
+          <input
+            class="valor_input"
+            type="number"
+            name="valor1"
+            id="valor1"
+            placeholder="Exemplo: 115.80"
+          />
+          <select id="moeda1" class="selects">
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BRL">Real (BRL)</option>
+            <option value="GBP">Libra (GBP)</option>
+            <option value="JPY">Iene (JPY)</option>
+          </select>
+        </div>
+        <div class="currency2">
+          <h3>Valor convertido</h3>
+          <input
+            class="valor_input"
+            type="number"
+            name="valor2"
+            id="valor2"
+            placeholder="Resultado"
+            disabled
+          />
+          <select id="moeda2" class="selects">
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+            <option value="BRL">Real (BRL)</option>
+            <option value="GBP">Libra (GBP)</option>
+            <option value="JPY">Iene (JPY)</option>
+          </select>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button
+          id="botao_converter"
+          class="conversion_btn"
+          onclick="calcular()"
+        >
+          CONVERTER
+        </button>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
